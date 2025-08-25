@@ -90,10 +90,10 @@ header .row{display:flex;align-items:center;justify-content:space-between}
 .laptop__base{height:18px;background:linear-gradient(180deg,#c9ccd1,#9aa0a6);border-radius:0 0 14px 14px;margin:0 22px}
 .dots--steps{width:160px;height:140px;margin:14px auto 0;background-image:radial-gradient(rgba(100,21,255,.45) 1.2px,transparent 1.2px);background-size:12px 12px}
 
-/* VALUES */
+/* VALUES (updated to use the illustration image) */
 #values .row{display:flex;align-items:center;gap:70px}
 .values__left{flex:1}
-.values__right{flex:1;position:relative;display:flex;justify-content:center}
+.values__right{flex:1;display:flex;justify-content:center;align-items:center}
 .values__title{font-size:56px;font-weight:900;letter-spacing:-.5px;line-height:1.1;margin-bottom:16px}
 .values__intro{color:var(--muted);font-size:18px;max-width:70ch;margin-bottom:28px}
 .value__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 42px;margin:10px 0 28px}
@@ -101,15 +101,8 @@ header .row{display:flex;align-items:center;justify-content:space-between}
 .value__icon{width:54px;height:54px;border-radius:999px;display:grid;place-items:center;font-size:20px;background:#fff;box-shadow:0 18px 60px rgba(2,6,23,.06)}
 .value__icon--green{background:var(--green)}
 .value__icon--red{background:var(--pink)}
-.values__blob{position:absolute;top:-24px;right:0;width:680px;height:430px;background:rgba(100,21,255,.12);border-radius:50% 40% 50% 40%/45% 55% 40% 60%;z-index:-2}
-.values__leaf{position:absolute;top:10px;right:60px;width:74px;height:74px;background:var(--purple);border-radius:20% 80% 30% 70%/40% 60% 60% 40%;transform:rotate(20deg);z-index:-1}
-.tablet{width:640px;background:#2f2b44;border-radius:18px;border:12px solid #2f2b44;box-shadow:0 18px 60px rgba(2,6,23,.08)}
-.tablet__screen{background:#3b3554;border-radius:12px;min-height:380px;margin:20px;position:relative;overflow:hidden}
-.tablet__home{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:28px;height:28px;border-radius:50%;background:#2f2b44;box-shadow:inset 0 0 0 2px #e5e7eb}
-.ui{position:absolute;background:#6c58d3;border-radius:10px}
-.ui--card{top:62px;left:74px;width:132px;height:100px}
-.ui--card.small{top:62px;left:224px;width:110px;height:84px;background:#8a77ec}
-.ui--flow{bottom:62px;left:160px;width:260px;height:124px;background:#5a4aa8}
+/* the illustration */
+.values__art{width:100%;max-width:640px;height:auto;display:block}
 
 /* PRICING */
 #pricing .row__narrow{display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -125,7 +118,7 @@ header .row{display:flex;align-items:center;justify-content:space-between}
 .per{margin-top:10px;color:#9aa3af;letter-spacing:.2em;font-size:13px}
 .plan__body{padding:26px 24px 20px;border-top:1px solid var(--line);text-align:center}
 .plan__body h4{font-size:18px;margin-bottom:16px}
-.plan__body ul{color:var(--muted);display:flex;flex-direction:column;gap:12px;font-size:15px}
+.plan__body ul{color:var(--muted);display:flex;flex-direction:column;gap:12px;font-size:15px;list-style:none;padding:0;}
 .plan__btn{margin:18px auto 26px;padding:14px 30px;border-radius:9999px;font-weight:900;letter-spacing:.5px}
 .plan__btn--green{background:var(--green);color:#0f172a}
 .plan__btn--red{background:var(--pink);color:#0f172a}
