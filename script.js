@@ -1,28 +1,13 @@
-const $ = (s, c=document) => c.querySelector(s);
-const $$ = (s, c=document) => Array.from(c.querySelectorAll(s));
-
 /* Mobile menu */
-const menu = $("#mobile-menu");
-const openBtn = $("#btn-menu");
-const closeBtn = $("#btn-menu-close");
-openBtn?.addEventListener("click", ()=> {
-  menu?.classList.add("open");
-  menu?.setAttribute("aria-hidden","false");
-});
-closeBtn?.addEventListener("click", ()=> {
-  menu?.classList.remove("open");
-  menu?.setAttribute("aria-hidden","true");
-});
-$("#year").textContent = new Date().getFullYear();
+function openMenu(){ document.body.classList.add("menu--open"); }
+function closeMenu(){ document.body.classList.remove("menu--open"); }
 
-/* Smooth scroll for in-page links */
-$$('a[href^="#"]').forEach(a=>{
-  a.addEventListener("click", e=>{
-    const id = a.getAttribute("href");
-    if(id.length>1){
-      e.preventDefault();
-      document.querySelector(id)?.scrollIntoView({behavior:"smooth", block:"start"});
-      menu?.classList.remove("open");
-    }
-  });
-});
+/* (Optional) simple testimonial nav—only runs if multiple .testimonial slides exist */
+const slides = document.querySelectorAll('.testimonial');
+const prev = document.querySelector('.testi__prev');
+const next = document.querySelector('.testi__next');
+let idx = 0;
+function show(i){ if(!slides.length) return; slides.forEach((s,n)=>s.style.display = n===i ? 'block' : 'none'); }
+show(idx);
+prev && prev.addEventListener('click', ()=>{ idx=(idx-1+slides.length)%slides.length; show(idx); });
+next && next.addEventListener('click', ()=>{ idx=(idx+1)%slides.length; show(idx); });
