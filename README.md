@@ -40,5 +40,3 @@ This project represents my ability to:
 - Take a design idea and implement it in React  
 - Deliver a responsive, professional-looking web page  
 - Apply modern front-end tools in a real project  
-
-I use this repo as part of my portfolio to showcase my front-end development skills and my growth into full-stack and data engineering projects.
